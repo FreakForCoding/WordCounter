@@ -1,21 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     
+
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"rel="stylesheet" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    {% comment %} <link rel="stylesheet" href="style.css" /> {% endcomment %}
     <style>
+        #twitter-count:hover{
+
+        }
         #blue1:hover {
             color: #4CAF50;
         }
 
         .tools {
-            margin-left:180px;
+            margin-left: 180px;
         }
 
         * {
@@ -41,8 +45,8 @@
         }
 
         a.my-button {
-            background: linear-gradient(to right,#959ba1,#6433E0);
-            background-color: #959ba1;
+            background: linear-gradient(to right,grey,black);
+            background-color: whitesmoke;
             color: #fff;
             font-family: Trebuchet MS;
             font-size: 15px;
@@ -56,7 +60,7 @@
         }
 
             a.my-button:hover {
-                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0 20px 0 white;
             }
 
             a.my-button:active {
@@ -64,7 +68,7 @@
             }
 
         .button {
-            background-color: #4CAF50; /* Green */
+            background-color: whitesmoke;
             border: none;
             color: white;
             padding: 7px 12px;
@@ -85,22 +89,22 @@
         }
 
             .button:after {
-                background-color: #000000;
+                background-color: darkcyan;
             }
 
 
             .button:hover {
-                background-color: cornflowerblue;
+                background-color: darkcyan;
                 color: white;
             }
 
 
         body {
-            background-color: #8b5ceb;
+            background-color: darkcyan;
         }
 
         .wrapper {
-            margin-top:0px;
+            margin-top: 0px;
             top: 0px;
             position: absolute;
             width: 90vmin;
@@ -133,7 +137,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #333;
+            background-color:darkcyan;
         }
 
         li {
@@ -154,6 +158,7 @@
                 }
 
         .count {
+            cursor:pointer;
             top: 450px;
             right: 400px;
             background-color: #000000;
@@ -177,43 +182,114 @@
                 color: #ffffff;
                 font-size: 32px;
             }
-            .side{
-                margin-top:100px;
-                margin-left:60%;
-                width:30%;
-                height:320px;
-                border:5px;
-                border-radius:4px;
-                background:border-box;
-                background-color:azure;
+
+        .side {
+            margin-top: 100px;
+            margin-left: 60%;
+            width: 30%;
+            height: 320px;
+            border: 5px;
+            border-radius: 4px;
+            background: border-box;
+            background-color: azure;
+        }
+
+        /*about section*/
+
+        /*   body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+        }*/
+
+        .about-section {
+            background: url(https://st.depositphotos.com/8298378/56025/v/600/depositphotos_560257598-stock-illustration-unique-modern-initials-logo-design.jpg) no-repeat left;
+            background-size: 55%;
+            background-color: #fdfdfd;
+            overflow: hidden;
+            padding: 100px 0;
+        }
+
+        .inner-container {
+            width: 55%;
+            float: right;
+            background-color: #fdfdfd;
+            padding: 150px;
+        }
+
+            .inner-container h1 {
+                margin-bottom: 30px;
+                font-size: 30px;
+                font-weight: 900;
             }
-            
+
+        .text {
+            font-size: 13px;
+            color: #545454;
+            line-height: 30px;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        @media screen and (max-width:1200px) {
+            .inner-container {
+                padding: 80px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .about-section {
+                background-size: 100%;
+                padding: 100px 40px;
+            }
+
+            .inner-container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .about-section {
+                padding: 0;
+            }
+
+            .inner-container {
+                padding: 60px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <script src="myScript.js">
+    <!--<script src="myScript.js">
 
-    </script>
+    </script>-->
 
-    {% load static %}
-    <script src="{% static '/js/myScript.js' %}"></script>
 
     <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:snow;text-align:center; background-color:black;">Word counter!</h1>
-    <ul>
+    <ul style="font-size: 17px; ">
         <li><a href="home" action="home">Home</a></li>
-        <li><a href="news.asp">Features</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
+        <li><a href="features">Features</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
 
-        <li style="margin-left: 65%; justify-items:flex-end; size:40px;"><a href="signup" action="signup">👤</a></li>
+        <!--<li style=" margin-right:0px; justify-items:flex-end; font-size:20px;"><a href="signup" action="signup">👤</a></li>-->
 
-        <li style=" "><a href="logout">Logout</a></li>
+        <li style="margin-left: 68%; font-size: 17px; "><a href="logout">👤 Logout</a></li>
 
 
         <!-- <li><p style=" font-size:10px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:azure"> For Exclusive content!! </p></li> -->
     </ul>
-
+    <hr style="color: black; border: 2px solid black;" />
 
     <div class="wrapper">
 
@@ -257,17 +333,17 @@
             </div>
             <div>
                 <!-- This will turn red after it reaches the max amount of characters on instagram posts -->
-                <h5 id="instagram-count">0</h5>
-                <p>Instagram</p>
+                <h5 id="twitter-count" title="Max 280 characters">0</h5>
+                <p>Twitter</p>
             </div>
             <div>
                 <!-- This will turn red after it reaches the max amount of characters on Facebook posts -->
-                <h5 id="facebook-count">0</h5>
+                <h5 id="facebook-count" title="Max 250 characters">0</h5>
                 <p>Facebook</p>
             </div>
             <div>
                 <!-- This will turn red after it reaches the max amount of characters on Whatsapp Status -->
-                <h5 id="whatsapp-count">0</h5>
+                <h5 id="whatsapp-count" title="Max 139 characters">0</h5>
                 <p>Whatsapp</p>
             </div>
 
@@ -277,7 +353,7 @@
 
 
         <div class="tools">
-            <a class="my-button" id="blue1" href="#" style="background-color: #4CAF50;">📑</a>
+            <a class="my-button" id="blue1" href="#" style="background-color:whitesmoke;">⬆️</a>
             <a class="my-button" id="blue2" href="#">Details</a>
             <a class="my-button" id="blue3" href="#">Copy</a>
             <a class="my-button" id="blue4" href="#">Save</a>
@@ -287,7 +363,7 @@
 
     </div>
     <div class="side">
-        <aside style="color:darkseagreen;">
+        <aside style="color:darkseagreen; " id="display_freq">
             <h4 style="font:100; margin-left:10px">  Details:</h4>
         </aside>
     </div>
@@ -295,10 +371,90 @@
 
 
     <!-- Script -->
+    <script>
+    let inputTextArea = document.getElementById("input-textarea");
+    let characCount = document.getElementById("charac-count");
+
+        let wordCount = document.getElementById("word-count");
+
+        let twit = document.getElementById("twitter-count");
+
+        let fbk = document.getElementById("facebook-count");
+
+        let wapp = document.getElementById("whatsapp-count");
+
+
+    inputTextArea.addEventListener("input", () => {
+        let temp = inputTextArea.value.length;
+        //characCount.textContent = temp;
+
+        let txt = inputTextArea.value.trim();
+
+        wordCount.textContent = txt.split(/\s+/).filter((item) => item).length;
+
+
+        var withoutSpace = txt.replace(/ /g, "");
+        var length = withoutSpace.length;
+        characCount.textContent = length;
+
+        //for insta
+        twit.textContent = temp;
+        if (twit.textContent >= 280) {
+            //alert('Insta has choked')
+            twit.style.color = 'red'
+        }
+        else {
+            twit.style.color ='palegreen'
+        }
+        //for facebook
+        fbk.textContent = temp;
+        if (fbk.textContent >= 250) {
+            //alert('Insta has choked')
+            fbk.style.color = 'red'
+        }
+        else {
+            fbk.style.color = 'palegreen'
+        }
+        // for whatsapp
+        wapp.textContent = temp;
+        if (wapp.textContent >= 139) {
+            //alert('Insta has choked')
+            wapp.style.color = 'red'
+        }
+        else {
+            wapp.style.color = 'palegreen'
+        }
+        
+
+
+    });
+        
+
+    </script>
 
 
 </body>
 </html>
+
+
+<p style="height:600px">
+    </p>
+    <div class="about-section">
+        <div class="inner-container">
+            <h1 title="about" id="about">About Us</h1>
+            <p class="text">
+                Word Counter is a free and easy to use android application for counting words, sentences, paragraphs and characters in your text as you type. This text tool is designed to boost your productivity and make your life easier. The app can be extremely useful when posting or submitting to platforms which have limits imposed on number of characters, words or size.
+
+                Top Features
+                Count as you type
+            </p>
+            <div class="skills">
+                <span>Upload</span>
+                <span>Save</span>
+                <span>Check</span>
+            </div>
+        </div>
+    </div>
 
 
 

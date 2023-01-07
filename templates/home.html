@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
           rel="stylesheet" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
     <style>
         * {
             padding: 0;
@@ -51,7 +51,7 @@
             position: absolute;
             width: 90vmin;
             transform: translate(-50%, -50%);
-            top: 60%;
+            top: 50%;
             left: 50%;
         }
 
@@ -101,7 +101,7 @@
             background-color: #000000;
             width: 80%;
             padding: 20px;
-            position: relative;
+            position: fixed;
             transform: translate(-50%, -50%);
             left: 50%;
             display: flex;
@@ -119,17 +119,92 @@
                 color: #ffffff;
                 font-size: 32px;
             }
+
+/*about section*/
+
+     /*   body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+        }*/
+
+        .about-section {
+            background: url(https://st.depositphotos.com/8298378/56025/v/600/depositphotos_560257598-stock-illustration-unique-modern-initials-logo-design.jpg) no-repeat left;
+            background-size: 55%;
+            background-color: #fdfdfd;
+            overflow: hidden;
+            padding: 100px 0;
+        }
+
+        .inner-container {
+            width: 55%;
+            float: right;
+            background-color: #fdfdfd;
+            padding: 150px;
+        }
+
+            .inner-container h1 {
+                margin-bottom: 30px;
+                font-size: 30px;
+                font-weight: 900;
+            }
+
+        .text {
+            font-size: 13px;
+            color: #545454;
+            line-height: 30px;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        @media screen and (max-width:1200px) {
+            .inner-container {
+                padding: 80px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .about-section {
+                background-size: 100%;
+                padding: 100px 40px;
+            }
+
+            .inner-container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .about-section {
+                padding: 0;
+            }
+
+            .inner-container {
+                padding: 60px;
+            }
+        }
     </style>
 </head>
 <body>
+    {% load static %}
+    <script src="{% static 'myscript.js' %}"></script>
     <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:snow;text-align:center; background-color:black;">Word counter!</h1>
     <ul>
         <li><a href="home" action="home">Home</a></li>
-        <li><a href="news.asp">Features</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
+        <li><a href="features">Features</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
 
-        <li style="margin-left: 55%; justify-items:flex-end"><a href="signup" action="signup">Sign Up</a></li>
+        <li style="margin-left: 55%; justify-items:flex-end"><a href="signup">Sign Up</a></li>
         <li style=" "><a href="login">Login</a></li>
         <li><p style=" font-size:10px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:azure"> For Exclusive content!! </p></li>
     </ul>
@@ -138,16 +213,9 @@
     <div class="wrapper">
         <div class="container">
             <!--<form action="count">-->
-                <textarea cols="50" rows="10" name="usertext" id="input-textarea" placeholder="Type your text here"></textarea>
-                <!--<div>
-                    <button type="submit" class="button" style="">Check</button>
-                </div>-->
-
-            <!--</form>-->
+            <textarea cols="50" rows="10" name="usertext" id="input-textarea" placeholder="Type your text here"></textarea>
+         
         </div>
-
-
-
 
         <div class="count">
             <div>
@@ -159,25 +227,61 @@
                 <p>Characters</p>
             </div>
             <!--<div>
-            <h5 id="check_space">0</h5>
-            <p>White Spaces</p>
-        </div>-->
+                <h5 id="check_space">0</h5>
+                <p>White Spaces</p>
+            </div>-->
         </div>
     </div>
     <!-- Script -->
 
 
-    
 
-    <script src="myScript.js">
+<script>
+    let inputTextArea = document.getElementById("input-textarea");
+    let characCount = document.getElementById("charac-count");
 
-    </script>
-   
-    
-    </body>
+    let wordCount = document.getElementById("word-count");
+
+    inputTextArea.addEventListener("input", () => {
+        let temp = inputTextArea.value.length;
+        //characCount.textContent = temp;
+
+        let txt = inputTextArea.value.trim();
+
+        wordCount.textContent = txt.split(/\s+/).filter((item) => item).length;
+
+     
+        var withoutSpace = txt.replace(/ /g, "");
+        var length = withoutSpace.length;
+        characCount.textContent = length;
+
+      
+
+    });
+</script>
+
+
+</body>
+
 </html>
 
+<p style="height:600px"></pstyle>
+    <div class="about-section">
+        <div class="inner-container">
+            <h1 title="about" id="about">About Us</h1>
+            <p class="text">
+                Word Counter is a free and easy to use android application for counting words, sentences, paragraphs and characters in your text as you type. This text tool is designed to boost your productivity and make your life easier. The app can be extremely useful when posting or submitting to platforms which have limits imposed on number of characters, words or size.
 
+                Top Features
+                Count as you type
+            </p>
+            <div class="skills">
+                <span>Upload</span>
+                <span>Save</span>
+                <span>Check</span>
+            </div>
+        </div>
+    </div>
 
 
 

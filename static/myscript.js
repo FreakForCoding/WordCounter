@@ -18,7 +18,5 @@ inputTextArea.addEventListener("input", () => {
 
     wordCount.textContent = txt.split(/\s+/).filter((item) => item).length;
 
-   
-
 });
 

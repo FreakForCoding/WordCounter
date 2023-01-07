@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+          rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 7px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+            border-radius: 5px;
+        }
+
+            .button:hover {
+                background-color: cornflowerblue;
+                color: white;
+            }
+
+
+        body {
+            background-color: #8b5ceb;
+        }
+
+        .wrapper {
+            position: absolute;
+            width: 90vmin;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 50px 30px 80px 30px;
+            border-radius: 8px;
+            box-shadow: 0 30px 50px rgba(30, 21, 49, 0.3);
+        }
+
+        textarea {
+            width: 100%;
+            border: none;
+            resize: none;
+            outline: none;
+            font-size: 16px;
+            /*line-height: 28px;*/
+            color: #0e101a;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                /* Change the link color to #111 (black) on hover */
+                li a:hover {
+                    background-color: #111;
+                }
+
+        .count {
+            background-color: #000000;
+            width: 80%;
+            padding: 20px;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 20px 40px rgba(30, 21, 49, 0.4);
+        }
+
+            .count p {
+                color: #a0a0c0;
+            }
+
+            .count h5 {
+                color: #ffffff;
+                font-size: 32px;
+            }
+
+        /*about section*/
+
+        /*   body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+        }*/
+
+        .about-section {
+            background: url(https://st.depositphotos.com/8298378/56025/v/600/depositphotos_560257598-stock-illustration-unique-modern-initials-logo-design.jpg) no-repeat left;
+            background-size: 55%;
+            background-color: #fdfdfd;
+            overflow: hidden;
+            padding: 100px 0;
+        }
+
+        .inner-container {
+            width: 55%;
+            float: right;
+            background-color: #fdfdfd;
+            padding: 150px;
+        }
+
+            .inner-container h1 {
+                margin-bottom: 30px;
+                font-size: 30px;
+                font-weight: 900;
+            }
+
+        .text {
+            font-size: 13px;
+            color: #545454;
+            line-height: 30px;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        @media screen and (max-width:1200px) {
+            .inner-container {
+                padding: 80px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .about-section {
+                background-size: 100%;
+                padding: 100px 40px;
+            }
+
+            .inner-container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .about-section {
+                padding: 0;
+            }
+
+            .inner-container {
+                padding: 60px;
+            }
+        }
+   
+
+        td, p {
+            font-size: 13px;
+            color: #878787;
+        }
+
+       /* ul {
+            margin: 0 0 10px 25px;
+            padding: 0;
+        }*/
+
+        li {
+            margin: 0 0 3px 0;
+        }
+
+        h1, h2 {
+            color: black;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        a {
+            color: #2F82DE;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .entire-page {
+            background: whitesmoke;
+            width: 100%;
+            padding: 20px 0;
+            font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+            line-height: 1.5;
+        }
+
+        .email-body {
+            max-width: 600px;
+            max-height:100%;
+            min-width: 320px;
+            margin: 0 auto;
+            background: white;
+            border-collapse: collapse;
+            img
+                
+
+        {
+            max-width: 100%;
+        }
+
+        }
+
+        .email-header {
+            background: black;
+            padding: 30px;
+        }
+
+        .news-section {
+            padding: 20px 30px;
+        }
+
+        .footer {
+            background: #eee;
+            padding: 10px;
+            font-size: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--{% load static %}-->
+    <script src="{% static 'myscript.js' %}"></script>
+    <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:snow;text-align:center; background-color:black;">Word counter!</h1>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#about">About</a></li>
+
+        <!--<li style="margin-left: 55%; justify-items:flex-end"><a href="signup">Sign Up</a></li>
+        <li style=" "><a href="login">Login</a></li>-->
+        <!--<li><p style=" font-size:10px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:azure"> For Exclusive content!! </p></li>-->
+    </ul>
+
+
+    <table class="entire-page">
+
+        <tr>
+
+            <td>
+
+                <table class="email-body">
+
+                    <tr>
+                        <td class="email-header">
+                            <a href="home.html">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhkAAABeCAMAAAC5BvZEAAAAmVBMVEUAAABV2Ob///9W2uhO1+VU1eM/n6pY3+5ErLcnY2klXWNZ4vBCqLJI1uX4/f5j2ufr+fvz/P1x3emm6PCy6/LP8vad5u+T5O3f9vnG8PVOxtO+7vTX9PhRztyK4uzo+ft63+oZP0NJusYTMTQ6k50LHR8ygIgdSU4/oaxHtMASLjEGDxArbXQfTlMVNzo0hI0OIyUJFhcvdn4Fmg4uAAAcHUlEQVR4nO1deXuqOhOXguJSQDZFFKQWbW1d2n7/D/cmZJssUI+159znfZw/7j0VyDL5ZTJbkl7vTne6053udKc73elOd7rTne50pzvd6U53+n+h9/Pr4AJ6rZ/w20/1ZW/v3vHb48tefh3/WxbcyUTbjWtfRi6CxtPk0pf3216v5kU7Eulv7/41G+6k0di2rcvIHfR6A/fCl2372Ov12V/xAlIaa28X/5oNd9JodOlYW/Zjrze8FEbWBK0QE/JPZ/YAKYwDHUf/mg3f0vvz279uwl+m30KGK5DhhRAYi8DTi7b+NRu66X1UD/PNY/1f1Ie2o8Po4zcK/n1kODEUGKVjKtqAjI/T8/s1HXrffv6UJwp9DvoW0Yesot7euPCf0VOdo7ZZ/WIwvopZXfT7yAgyAYysMgFDR8bL+XWT538+ST/R5N4PB1/Pt2IPbgvS0XlLJ/uXltc+xofDYfwrs7eVzn23URNty7Ufb73a/ToynBIAw4LAQFaKGRnjvE+NFiv/E2w8Ddnk7m9uJvhfZBXdtvWS35/GeO5i6hf16G8pJFs4GrZdjG5b/K8jw1uKpSQCwHCseRxTESIjY9Dng4EGub5YTB4Kl334R9910luudNkuTvIb292w3xjzTb2W7eY3qvo72stDZ1u3VYN+HxlTjow5BEa0xj+lgYqM7d6Fldj2RpHQ26dR/fh4eFGnZm3L3+U3key8x0LADcHjz+OwbyuGP6r6b6iqZ3Xk7Pym0ur39QwOjKnnecTVhf5RUsCsMMMhMl7VBrmvsL3b8952kWxwJ/mrNHkPrjq5H2/AnjdmX1WzWUSNqokY98NehQWp2j7foO5uOvZJxZiZFLTuLXrM6beRAdSMcLVYJjNMyWLts19njoQM3h6ghQA2jws+FLbbr8WDl4JPbt7gr5+zpybNCVLUXn9BHDH2hjz73BVWCz9se/Dzui9qmVOmK+Y6tPvHG1ZgQIbnCRheggxHDKIBGbKbS6fUgsh435AavGAezwKqhfS5PbCTV4zJKzci92wGVWVFwWHnP1/vSbFexjRoUm4jtccbSV44Mtsm9XdF/5DoTCDszQhm3VtWqiMjSrIwzGYXIcNxgqiaz+dVECjgYMgACqiZVhIyjqTDToy9YyFthL1njVVFt8um5jt9UK1935+S72zr8FPuPDf6p5B7cbP29ZEV8PbYF23BbIgXqxWavRFn1y8vKM248ZaldIhuqPsqyPCqVKqrExmOUy4zsiz4WSL7NrmesfojmfFFOswETdLgrRkKRG+FJrImVJwcCKBKukglTVt+PoXGzfALdK9J3869Qy7UGscrkzXvz4IaYLb99NPaO1vWMMpjo9UsypZV3FAHlZHhzPj6/7BUvNgqMpxgNhVvoxmemJAB/VxGkvWMQVNBwBlNXKZ01R6w2oMgYCvGnqwnr0Tqs+/CZuraw59OoYPC/ykxpWpgByE2ZJANDz5182pG1U2pJh3mgQcyh9wbolFChpfAke5GhlOuHxRKQajsUmQ0+BPIIGpGxVlNJqndzIUT0fecajENw9XcIzOzESefRB+oJLzdwIwjIkzIPYIMSzhcvCiZKj168EnTLPs3cwseCTJ4pb+LDCnC8eArIVEFGSb9YSWUDa6BLjqBsSBFtyKDSskJ1hjIBLaqKXxCvAsnog/M5M8uQsb2dKg3+bAePxviLbumSoHuqcwTJ1hK0UJGFV0EbzZKvfft8/PL85toIhmJQEXGqaMMA21POFa4rw8nXb5BZESyVOxAhleZRYFYULieEXUBI/EUZJAFIxLzcEVe2HBmWKzmKVH2Jphbx0acOAKtjVOtkedPozOisZllz7tB7mL3iI3+u6k1jbUTGY4VG3HBX5uQGfz+ckAt2B0V5p/GRx2Lb6MxM7c+j+e6/sJFfIzOj/lk4k7sTb2jihVhhmAuRcYXrOTzuKvrwSMqxdj7jy/Q+XzwpSy9ABnSWtKJDGfuq8yg31QaMpRSJQaWrGhVA03FS0RjwIZrrqwYMWHGuadLfdIOe3h4zIs+6rfbL/IBC3edRo95nm/OL891AQ1P2+3n0AWyfRpRtceIDCdqV64XHm3a52m3zwsLD0CBq6TDvh0PUMPQLzsQ+3s/1nne76PX0EAeh3lBvnrd5DRwhtZO/MMOScJRbkSG3c/zry1p/G6TF8Qp2JRCg7HPo1fReRd23srl1Q8iQ5YD7cjwYpUTnFKmnIAofLma+hpNs3TGnVLAam2MAUcMvzAziEHrCKBNiaax2TK3gxA1IesuDmSQGhCH+gPUqNFwQpIQ3Ymr+Zdtd0icRZ9omhYTyjkjMqCyrhMpLv/akMpI4dhxW+M5P84nuGH4F3vIVrwRfpf82K/PLsOsbduK2x89Hk7ITyoy8NuTzUtvXBcTV0I9+hmh/jhwRedVQ892pTjkFciA46YRExogc8exgkinAMRdBTI+NrbSFKKDWsX2TJ6AiUqXc6SD2rLb4WGlZwc1Xe8/1n2VITK5BVpSnl7xNOW/GZHR7adhaSg694t6C9tguzlZw3bwR7vNuUofs6caMprHBWq94Strvyu6Pd52/2xEhnPhatJpbiyZD18g43sC3vGaenDEhJxTHZQYpgEwBRYObRfpBHCqJU5LRbY2U/RXBgPLlaapARmODoxsmQi1Y9bSAERuLrfBnux4v/+UjMiwjLEcq1kxviF78mhChjLkbchQ/N3+Yl4CtYD6aa9GxgdtjxAN1L1XkMUEajhUB3VVb4aQXBcQ9uxj/wiIt6iMNSBDVZ7CZRU4nmicMXWN91b5uz/+PlEbRyD0KIQZGX9AWueFd1CyWoMF4HsbMjxoh/pLy3McoGWG1D18LTJoerozF3WQEgnr5LkaUz+Yqo6FUFH0THEgxmPHKZMVFkPTNI6MSxAmFRmqorWaOc23nA+hlKHkmZvAf7GLE8sCccBrjhcE5C/PquZxvEziEgQhcLHCao1pJUoNaCGvAkupWnS+iknnV3FFv2T+Zs07HpWcC63IABJiyuaGNl2vRsZLQVotJHMCuyuJtTV8Arwx3LPvWFG8WGdZtoyBXuNYVVk28wRpx2IuhImUciYyMlQfqBVJ1up0Lr4jfPBFJgoqpEzSdbbOlnMwNdEsjBdLbpsxmy+Yox/ZS/NsOl2VqIBosaYV+tOUOt/R96hfgu1hhmm95IOGXiuX2XoahqiUWQA6H5VlwwynSkU/wiWPX5qRYVmcC62riRAQK5akBaY4ZcrVyKAuDSCGpuBNxTsirRpiAYop9yQHZcYHsGwYspqLIBGrSZTneNV8uVqHmFacgRQZkrm6hDI+WEz99ariiHWqJRDDKR91uipmzJNOX25+pK5kKpqTuWIcp0Ezqi2uFCqzEcbkzxKGDTL1s5kVKZ1nXn33cC0yRFRjJZAoRiz+KTKeqKszVJts6c4RGNsRjlPmVVEdUesGyALFK427IU0/RIuM/vCBIgNmtkLxQDlRCenkWKli2i4oywLfwGRmdWNviGilZhxnqBuRFprgncIfWzPt+bSpWaj2K4NXn2n01yLDIdCYzsSwAJkx+ykyqIdcNIS60Jt6lA5PI/FIgGaNm+BVBubhhcnTfxZEHCHevMX8IsgAPJ22KydYV9fRFZb4A6GrLcT33CBvkJ1qn4JGdniU/Mhx5tqoP9AJ5rUiChOJF2621yIDSek4XcykdF/ByfLHyDioOqhQKCt1AokZC/JN8fg7pYk7WKIFpt/lAlt9FRgZUGQwGWPZBkvRMQ4fkYB8gFbgA9jKLmQgUdnxdN4WqsKo7+58Y+DYxcvVyJBVaEuarz+2TXq9t40SYebj72iedu7SguOFmuCVLR7KmdcZyEFMdzr8NY3MEKPiC43+8TRWfGhtYQEfoUl4ZTKhMgpvQPINMvyq3c/mx63NT7+bFsSD7Y5+gAyZPGBi/tSfgelV1UEzNv56pIK3QfAq61DQ0AedqwlCRpcjDyMDGCbMJe3usU/9mEMHmdea5rhyQPMEMoA34DtkPMRl+7PWnmNx5bU/feDhntshAwKYmZg/QcYbaZMI/TId1DDdqcILw7Pop8i4lNDe63PZh1H/riQ0hAwwtZnR5DKf8nnDnepOx9jFngkZIIz43WqCRGV7nLKDkBllwKuSrMXyjH+MDC+QWMlUQh0ZzW4CK4oiC28u6EKGroOSyWliB12noVYSWV3LcFipksdPKi6dfatdt3tokAHKprNgIoIN2+OBsshrxyYSaiZkgGbNDMgI00T8NPWc2LhcrjoBhVVzRQnxk7LibCVx7c3bLZDhBPJoLfVYK2GUXc2W3FDKktKG2FCRcZDTX7kOauA2FScgBLfw5IkRpssE8ivxJC8usnywF5corGEVdUVQG2QIa5puMpCD14XBVztNkwSuUaVAhkh2EqtY0yd5iNMSOziFX8XD2afzuejoYo6otALZB5cm6B3gUdGmVxo0nW8UYp8Ym2yn1Y+Q4XiK3RxyK1JCBrKvM3mB87M5kBsqMpizWHQJ8wrKBWCINMUAzaqSVchFhUUVkARrT1Jk6V4NJ0rSVRLJer2/iBG/4yX0dImaMmrkSU0fq94Y3MQINSEAWFkKzKfCauUyI1StVj8mLhLBbPwVEsIgp6vZ5CVZsyEyH/GvQAWz5LgDy7TCxma6ZN7r3c+R4ZSqsiaMSAkZxkSftdgXr+2Fr1UdtLFBgIdDdM9vmATelIx9Og8kJRmWG86FuxIvclCTWVV0Tx30jgNBRsLKk7HUcrpBBUYQqMsDDNBUFLIwIEOxgLgJBFQg+pUaUQP+Hj9mUw9015Jt6RnsPDOz2PlHP0CG7sgBAT94skqLlu6XrGEaMpgfVLwbCb8h7pIjisEAA1IidqA3h0fDgcelAqxSYqJQ1IooSgsy6OYTkEk3HuzpxgfQSz4BhKT3BU4By1qREVM+fY8M4AdmkHcA+30ZGab4rG0ffoyMQFPi4bYCmNOlvsdJ5LcoyKCZfUApS6SArgPWcWSlAwkpjR0IxsHsYXkSQXKmhk8lZACBRLOQeb7eoZhQfxcEWCnK4SuVL9THC5Cx4OgWnTYjA4w6EQdICMIQAS4JvKM69ptxM0bh/wwZOjBgRUBmtJuBTDHXkfFFzt4QvVjBVXbpQSxE0BWwgFoETM4Trq9EQwZ3Qwj1YA16fxkyYKaWEFApCK/yT32hFMYGZKzlpbO8HBn8hdBpYvCzVFLa50ZkgDG1J2J7+bXICNSVRDlOB5y50+Gqj9XccUZUBwULSASEYiSVitYPUaKkf4LIDnBxLFVk2H1qJkM3JPj0ImTAwx0EwELAFRAkE8iYf4sMXwTQv0OG+GjpRXDjHKGFIldI3f09TXSzbRce73AtMlS7OVE2tgpk2B2uoylDrYoMlosMlhMhF7APA/o8PbF+TKGP0hjINCEjp9sHHLMCIukZQlhJesYXMNHBepbB4BIXWwAZQtAKRCvIECvid8gQRaSpPh+JGFSRYRfvhzqfILKHO7iR6TpkyB4BfH6AGnIEegZQQMNplq2htKG7E3VkjG2Fx74SRgF2aiT5lYXaSi1Cck6SmMcmZBwJG4QmAPvTaZsQI48HTRo7UZErbGA5I4zIADLD+TEyDETTPnRk4Pa/H4/qnpSrkKFkj68NWY8wd5zBdzmrItuOqpnkyTYjo9dXdrgK8kmpYC2HPiIwdJTrfYIxPhgmZByUDSs0UqfaoAgZwJ9BP37v9T6pxuxYsyQpgTyDS6yoFiBDZJgomWO3RsaSFWJEhoGukxmwBcJwbkGGRdJLs4rFZ71SYYwJGTSJ3BBUJN8YY9wrB4oo6fQngQbNNkHIoFuZeL+omyHXkAFDwBX9+jBmaZyk7mkml89IbJQSBoPQUIUcbvyFN0WGn3GhfgtkRPIDkJ8B7dCpOU1a9oGWsxikIgKzux0ZR3UPiRgQGl4zhA1nEjJgB4APqLwcGTQGIiFDqD50vttsU4/eWB+yBEQIjXETwXnJO/4HyGgzA9NStOIWyFAegD1qQP1cqUeqUJLjJvKxPM4lMuOd1qXFSliui6cnqDSeHKPMgD5hpx0Z6mpCa4LIAOX7yummmr1Gs6S09mYiP4OnMsIjaOJrkWHI2fGzOGiYT4fgBsjoOCVB1JtJwAC58x1ReA8kMc5a9Ywe3ZOmLSfMA2DYKqd4cqDlKeRsBj0epGc5C3cYhgMvflKGMIi5KafPGOKcAjtOBKPd4CQW3X3fpDdegwxthQ1Xcdm4ch2vipM5XlJ+Exlg/vkSMKLlep3Ou5CBr7CIYDyL7iUxIWNrKTucabPEiKnihMw/8YHYdACdkjPHgIwXVasBHiiwRqh+66UFyJRkB1KY4bZLiPfG/SRvbcKh5auQATLZfLyJxCJbI5DBRmZGfD0yPA8gQ97AwpEBk4/g1KIeg6QNGY5n4VA8FLnrNk8Xpo2yEZ2QCEFpuX9kCyzQP5hnGk7IaWQZkPHW7HIBKwXJ5MVthkKryQOVZzcLT5iTR/nhuBALK0ne+csoUDP00JhdtZpYYANJQMcPdUHsMJg51yHDiWKwMyfDK5QBGUDHnkfN3jcL72nme8ObFUJHRhDr6RWzVk9Xj2dpKOMPtpioOiid5yDBpQlSOhbMckEsNCDjnZxhA0tMInw6nbwtoJEZcNP1Qxg3mUiBlJAcimKIHuYFUKDgEek+imhtlhmiZy3IgPibxlGAB6aEO16y62SGHjzNQII4RwZQE/xwvV5hysCRXc3pBRoyHMMqvG6Nm2B6KgzWyaqjSPorzMWYo1GD226JkqojgxrJ0qD7a02jbNYrR85gD9PFQvE4zgAOcCzfmkEgNDtCvjkMMzGt6l2xVrrTXEo8CtHYKH2YXoUMU2uBUcWRoaX2qxQZkKGnfQPdvuV+E6rvSn2jKiuxnmUdhMUkJRPBX8utxd+bkDHqG7UajR8q9ky08KRiwqmMpKhtokCKDH6lLmQs2tkMKb1OZpjyioUmwXcvduS+0l4ZkGFwwvgs76ANGWf1LA2mf9p5oe5+b7H/VFoo7OPI+CTbabsTc2nfvhnWtHvDD13zDCYuJJEdKPxKFyDju2XqKj1D0qw4Ca+GYV+rmXyTnmFI8xe34LQg46mxTjw9Nd0ekOPYpcmb8bpMPjBCa3VicWTwc6Q7MnsxkTbruSmCcGan07bdRWjQHa9gSi6SGSLIzJHR2YHFVbZJy4hz99nFyIhNeoYpz5/vCW27LctSFQ2aZ2of6TEbsFSw/9yI8QeskTqtyDgVlwwYVYCdqH27D2lDm9xaiXE25ECCxCFDcE/XQIWrniPDqdqhsbKuQ4ZZKRLHJTNkfLPKEhtf0zOMW+rmXVYrS6oEs4DoWXgk6W4lUSp02baAl5mQGjKa06tr5uLuEvPMm+IELQsK83B4ZqkiKdDqAYn+Urg1Ks7llcFMZ2gRtQj/i9O2G5ocuq1GD5pp0Y0MmCYDusJrvFADpazRbBOjlPOjdh9ojx/ZJzKV6GmKB9Ru1Q8mJzUaTyvVz3QgA+U2J/p9ssPwDVulQ2ZxA8GUGNgQiufGBWcB24j9WxCFKbaxKeAyYWWYZCFfktgwhyBG5ASmWZixwBUfPmJdtB7BDW2TUtbjfT+cLg22SdfhZT47yV63WoNlqPOSHrXUgowjPVuP8Y9uiMDHfNJx5JOGGsAss0jfqONDfyVlHVVa6bmdR5ZiESiDPk0CL0imYZjB6KETqEcghJL/R/eJhjO+evIy4lWIjzoMs4QerpAgLvlo0JholsBEe5sJHBBnha+ENauVPJLrJBKnurDhI5Bz227pkfwZVjmfCSrLyAI+ThA3aVXNU36miMEH6kXzOFkuZBHadKkNGVuynLC5wq7xaHJl6JVAdMGnBrC9qVlSiHJqygpk6rJRm9LpWNBTOvkdGV4kTIMsmTdc8Bx2NhLoENhf5K9iJX1J3XTBzqpHS/uApwZix3BZVuLAJC8oZyVxdafTMJNvPSa9hVFMr0rSNOFuJ54/VCbE2exPV8tZJZ/S1KAppKkx/bZjh5UT6SWSGiXlZ1TLdJXKtEqTGRBpxriJ42AGRHD7UiMXW+9r/WJrfxaGKfV+0oVxy4ZxiSbzkl0QsKMHcjexAj6n8bdKb6L5nB16ZXN5Kg6aRzCYJwk+GCvQs0/gcfRRmSzR0MRlAI+AY00o2WH1Pmoif1yM5au9lBoY5x18uBptIr8uu5rPleyIJuxCObMTQhN/jQ/XDNTiEQW48/Sb1osvrrwTyTMRbEHXjmcPHjTQFN16ky/LlcInotBmsCPG2DmJnhfwXTT7995HznvkodFdpAscYxRzSrCOz2CR/VhL4+WZrvRBi88A3tPZ3P0FN+ra7hBUEsUIOMu4FNLXLvCO4kNx8bXr+Jua37surorSzgi0xr0v/aIP+Ibeeav1GqW/cMezTg5QRyurCxn6aYhcYzqptyKicrBkPIFxaxgAEOvmY+0rF54offjmIFnM3dfe9rV9WG3rzM5+5k0ACLPdPQHiaaiX0VYoEpOf2h2QfQUEdsOZJ50rouXqJ51XwPwTZEAbFq/1Hbd/n5WjXd09f3RUHtn04rT3Qdu4ufsPcOEa+Ui5lu6JHdwsF02nm225/UbL+doYj5y17ckQi7S3fcuJtLYlLljDt+eIljb3eYoDOOAmEDdHYBrLuEGi83kIK7EtOshn4wHCqGXF6+iUS88QTNtvgPk3yAB6e9yNjJ40PW37ERzG/yVNcFtsSh8ZRbXdb47jP23gedxWrVwY8HnIlZOV8M3ARdF3bRf9/5UuPR/yafbkRdfeHAirP3d9QxOU+zo/jo9F33bJ+eP9Yjj6+GJ3GFvirk/W5zHslJ3jI5POOb8nFpR8GhTqUeWo9P0IC9Q3KKlse9Bxmfk/QoZQNGbfIAMtna7FdsoU8nWKTxuXc8bdgDuOn+tCPiAaT/aaDur7mR7Xbrvu0HQx8tdjnx7c3pzdXjyiLz/G9WBwhld/f+4eC/EaLiwfgGswXgb6UfLFWbu34umrfhwOH/ntFC+7wT4f1odjvcH5pa5bPLJCPwY2rc4tKJ4/d4ONPZm4+at0B8Xb7jV36cXgrjvJH+sRf7zLWecnm8575v4KMkgaIngKwknld8joPZGZhW/WVi2s7aEomtP7+/lOhv+pLti0a64DL85gl83zuM6Loth/vRhuu2m+Pp43RR9RsTlrGzE4vZ/GzWuWhV4cfql3C7+89i0q7xspkLdcV//++SnJ9C254OYD31i8Oz6DZ0+jV9TsvIa3tXw8jcfarcYIHC+HwQa9jEH2JhX/djzjzm92xw6B0ftLyJilq9USOGNgjhW2nrqRgVmyG9QH8wVHn6N6UI9MV5YdazRz8G0Nm1dpslP69o6109OTeSiV146H0ZO5bdtRPUTyyXX7+4G0/+sH9P53rhb/K8ig6qa/FBa/ME3Wnf6Mn9Lby3h8fPrNm+6+o/dT04Tu6fmfpN9HhtgjzDdFg5BC/KvIuNP19BdkxuqB3oP0EDaJ5UH6wK9Gotdn3pHx36PnnKvX3xA+dmg8ufBlFx8e8Ejehl5S9Qev0Q8nv36L+p3+nI4bq38J5c3ZhufiopetDXa6ngaXFd2vb3g18Z3udKc73elOd7rTne50pzvd6U53utOd7nSnO93pTne6053udDv6H5gxTohgN1ryAAAAAElFTkSuQmCC" alt="Word Counter: Count em All">
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="news-section">
+
+                            <h1>	Introducing Features:</h1>
+                            <br />
+                            <h2>Text file Counter:</h2>
+
+                            <a href=""><img src="https://i.pinimg.com/originals/95/2b/2e/952b2e8487416502cdb076c4af528016.gif" style="height:200px; width:700px;"></a>
+
+                            <p>Exclusive: You asked for it, we built it! <a href="home.html">Upload Text File</a> A file can be read and counted by our website easily, Just Upload the file and it's counted. It's that easy!'</p>
+
+                            <p><a href="signup.html">SignUp Now! &rarr;</a></p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="news-section">
+
+                            <h2>	For Creators, Influencers and Social site lovers:</h2>
+
+                            <a href="signup.html"><img src="https://nickthemarketer.com/wp-content/uploads/2022/02/Social-Media.gif" style="width:700px; height:350px;"></a>
+
+                            <p>We have counters for keeping a track on Twitter, Whatsapp status and facebook posts max character limit, this will help you to know the frequency of the words you're writing and will make you seem more professional and not repetitive. <a href="#about">Learn more about US</a>.</p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="news-section">
+
+                            <h2>Edit, Copy, Save results and texts to access later:</h2>
+
+                            <p>Once you SignUp, You'll be able to Use all of these method and we Assure you that it will be only 'A single click away!''</p>
+
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="news-section">
+
+                            <h2>	SignUp and Go PRO!</h2>
+
+                            <p>Remember that <a href="home.html">PRO</a> offers loads of features that really unlock the full power of CodePen. <a href="signup.html">SignUP now!</a></p>
+
+                            <br><br>
+
+                           
+
+                        </td>
+
+                    </tr>
+
+             
+
+                </table>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+</body>
+
+</html>
+
+    <div class="about-section">
+        <div class="inner-container">
+            <h1 title="about" id="about">About Us</h1>
+            <p class="text">
+                Word Counter is a free and easy to use android application for counting words, sentences, paragraphs and characters in your text as you type. This text tool is designed to boost your productivity and make your life easier. The app can be extremely useful when posting or submitting to platforms which have limits imposed on number of characters, words or size.
+
+                Top Features
+                Count as you type
+            </p>
+            <div class="skills">
+                <span>Upload</span>
+                <span>Save</span>
+                <span>Check</span>
+            </div>
+        </div>
+    </div>
