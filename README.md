@@ -1,1 +1,1 @@
-# wordcount
+A word counter website is a web application that allows users to input text and counts the number of words in the text. The website typically includes an input form where users can type in their text, and a button to submit the text for counting. After the user submits their text, the website will count the number of words in the text and display the result to the user. Word counter websites are useful for anyone who needs to count the number of words in a piece of text, such as writers, students, or editors.
